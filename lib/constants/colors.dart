@@ -1,11 +1,12 @@
-// import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-// import 'package:foodwallfy/services/responses.dart';
 
 class FzColors {
+  FzColors._();
+
   //* Light Theme
   static const Color appColor = Color(0xFFFFAFBD);
+  static const Color bgColor = Color(0xFFF6F7FB);
   static const Color canvasColor = Color(0xFFFFFFFF);
   static const Color textColor = Color(0xFFFFFFFF);
   static const Color iconColor = Color(0xFFFFFFFF);
@@ -27,14 +28,5 @@ class FzColors {
 
   //* Get Colors in a List
   List<Color> getListColors(List<String> colors) =>
-      colors.map((color) => FzColors().hexToColor(color)).toList();
-
-  //* Loader Colors
-  List<Color> getLoaderColors() => FzColors().getListColors(
-        ["#FF512F", "#DD2476"], // Bloody Mary
-      );
-  List<double> getLoaderStops() => [
-        0.0,
-        0.5,
-      ];
+      colors.map((color) => FzColors._().hexToColor(color)).toList();
 }
